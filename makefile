@@ -1,3 +1,3 @@
-OBJECTS = palindrome.exe
+OBJECTS = big_multiple.exe
 include ../../GNU_makefile_template
-LOCFLAGS = -I../palindrome
+LOCFLAGS = -I../big_multiple
