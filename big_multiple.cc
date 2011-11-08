@@ -1,36 +1,48 @@
 #include"stdio.h"
 #include"stdlib.h"
 #include<iostream>
+#include <math.h>
 
 using namespace std;
 
-void Multiple(char A[], char B[], char C[]) {
-  int TMP, In=0, LenA=-1, LenB=-1;
-  while(A[++LenA] != '\0');
-  while(B[++LenB] != '\0');
-  int Index, Start = LenA + LenB - 1;
-  for(int i=LenB-1; i>=0; i--) {
-    Index = Start--;
-    if(*B != '0') {
-      for(int In=0, j=LenA-1; j>=0; j--) {
-        TMP = (C[Index]-'0') + (A[j]-'0') * (*B - '0') + In;
-        C[Index--] = TMP % 10 + '0';
-        In = TMP / 10;
-      }
-      C[Index] = In + '0';
-    }
+long mult(long x,long y,int n);
+int num(long x);
+
+long mult(long x,long y,int n)
+{
+  long a,b,c,d,s;
+  if (n==1) //起初这里落了个＝号
+    return x*y;
+  else
+  {
+    a=long(x/pow(10,(n/2))); //取x的左半部分
+    b=long(x%long(pow(10,(n/2)))); //取x的右半部分
+    c=long(y/pow(10,(n/2))); //取y的左半部分
+    d=long(y%long(pow(10,(n/2)))); //取y的右半部分
+    s=mult(a,c,n)*pow(2,n)+(mult((a-b),(d-c),n)+mult(a,c,n)+mult(b,d,n))*pow(2,n/2)+mult(b,d,n); //书上的公式
+    return (s);
   }
 }
 
-int main(int argc, char* argv[]) {
-  char A[] = "218";
-  char B[] = "388";
-  char C[sizeof(A) + sizeof(B) - 1];
+int num(long x) //判断输入的数字的位数
+{
+  int i=0;
+  if(x-9<=0)
+    return 1;
+  else
+  {
+    while (x!=0)
+    {
+      i++;
+      x=x/10;
+    }
+    return i;
+  }
+}
 
-  for(int k=0; k<sizeof(C); k++)
-    C[k] = '0';
-  C[sizeof(C)-1] = '\0';
-
-  Multiple(A, B, C);
-  cout<<C<<endl;
+int main() //主函数
+{
+  long x=123,y=256;
+  cout<<mult(x,y,num(x))<<endl;
+  return 0;
 }
