@@ -20,7 +20,7 @@ long mult(long x,long y,int n)
     c=long(y/pow(10,(n/2))); //取y的左半部分
     d=long(y%long(pow(10,(n/2)))); //取y的右半部分
     s=mult(a,c,n/2)*pow(10,n)+(mult(a,d,n/2)+mult(b,c,n/2))*pow(10,n/2)+mult(b,d,n/2); //书上的公式
-    return (s);
+    return s;
   }
 }
 
@@ -44,5 +44,8 @@ int main() //主函数
 {
   long x=1234,y=2564;
   cout<<mult(x,y,num(x))<<endl;
+  /*
+     3163976
+     */
   return 0;
 }
