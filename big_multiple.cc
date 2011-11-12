@@ -27,7 +27,7 @@ long mult(long x,long y,int n)
 int num(long x) //判断输入的数字的位数
 {
   int i=0;
-  if(x-9<=0)
+  if(x<=9)
     return 1;
   else
   {
