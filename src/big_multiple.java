@@ -3,6 +3,30 @@
  * 
  */
 public class big_multiple {
+	public static void main(String args[]) {
+		long x, y;
+
+//		x = 1234;
+//		y = 2564;
+//		System.out.println(mult(x, y, num(x), num(y)));
+//
+//		x = 1234;
+//		y = 25645;
+//		System.out.println(mult(x, y, num(x), num(y)));
+
+		x = 3;
+		y = 25645;
+		System.out.println(mult(x, y, num(x), num(y)));// 76935
+
+		x = 1234892;
+		y = 25645;
+		System.out.println(mult(x, y, num(x), num(y)));// 31668805340
+		// 3163976
+		// 31645930
+		// 7518135
+		// 316182655340
+	}
+
 	static long mult(long x, long y, int nx, int ny) {
 		long a, b, c, d, s;
 		if (nx == 1 && ny == 1) // 起初这里落了个＝号
@@ -32,23 +56,5 @@ public class big_multiple {
 			}
 			return i;
 		}
-	}
-
-	public static void main(String args[]) {
-		long x = 1234, y = 2564;
-		System.out.println(mult(x, y, num(x), num(y)));
-
-		x = 1234;
-		y = 25645;
-		System.out.println(mult(x, y, num(x), num(y)));
-
-		x = 3;
-		y = 25645;
-		System.out.println(mult(x, y, num(x), num(y)));
-
-		x = 1234892;
-		y = 25645;
-		System.out.println(mult(x, y, num(x), num(y)));
-
 	}
 }
