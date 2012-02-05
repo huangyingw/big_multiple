@@ -22,10 +22,15 @@ public class big_multiple {
 		y = 25645;
 		System.out.println(mult(x, y, num(x), num(y)));// 31668805340
 
+		x = 1234892;
+		y = 5;
+		System.out.println(mult(x, y, num(x), num(y)));// 6174460
+
 		// 3163976
 		// 31645930
 		// 76935
 		// 31668805340
+		// 6174460
 
 	}
 
