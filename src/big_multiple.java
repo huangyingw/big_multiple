@@ -18,13 +18,13 @@ public class big_multiple {
 		y = 25645;
 		System.out.println(mult(x, y, num(x), num(y)));// 76935
 
-		x = 1234892;
-		y = 25645;
-		System.out.println(mult(x, y, num(x), num(y)));// 31668805340
-		// 3163976
-		// 31645930
-		// 7518135
-		// 316182655340
+		// x = 1234892;
+		// y = 25645;
+		// System.out.println(mult(x, y, num(x), num(y)));// 31668805340
+		// // 3163976
+		// // 31645930
+		// // 7518135
+		// // 316182655340
 	}
 
 	static long mult(long x, long y, int nx, int ny) {
