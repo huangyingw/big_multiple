@@ -43,13 +43,6 @@ public class big_multiple {
 			b = (long) (x % (Math.pow(10, (nx / 2)))); // 取x的右半部分
 			c = (long) (y / Math.pow(10, (ny / 2))); // 取y的左半部分
 			d = (long) (y % (Math.pow(10, (ny / 2)))); // 取y的右半部分
-			// System.out.println("(mult(" + a + ", " + c + ", " + num(a) + ", "
-			// + num(c) + ")* Math.pow(10, " + (nx / 2 + ny / 2)
-			// + ") + mult(" + a + ", " + d + ", " + num(a) + ", "
-			// + num(d) + ")* Math.pow(10, " + nx / 2 + ") + mult(" + b
-			// + ", " + c + ", " + num(b) + ", " + num(c)
-			// + ")* Math.pow(10, " + ny / 2 + ") + mult(" + b + ", " + d
-			// + ", " + num(b) + ", " + num(d) + "))");
 			s = (long) (mult(a, c, num(a), num(c))
 					* Math.pow(10, nx / 2 + ny / 2)
 					+ mult(a, d, num(a), num(d)) * Math.pow(10, nx / 2)
