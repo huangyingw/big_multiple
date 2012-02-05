@@ -14,13 +14,13 @@ public class big_multiple {
 		// y = 25645;
 		// System.out.println(mult(x, y, num(x), num(y)));
 
-		x = 3;
-		y = 25645;
-		System.out.println(mult(x, y, num(x), num(y)));// 76935
-
-		// x = 1234892;
+		// x = 3;
 		// y = 25645;
-		// System.out.println(mult(x, y, num(x), num(y)));// 31668805340
+		// System.out.println(mult(x, y, num(x), num(y)));// 76935
+
+		x = 1234892;
+		y = 25645;
+		System.out.println(mult(x, y, num(x), num(y)));// 31668805340
 		// // 3163976
 		// // 31645930
 		// // 7518135
@@ -37,14 +37,14 @@ public class big_multiple {
 			c = (long) (y / Math.pow(10, (ny / 2))); // 取y的左半部分
 			d = (long) (y % (Math.pow(10, (ny / 2)))); // 取y的右半部分
 			System.out.println("(mult(" + a + ", " + c + ", " + num(a) + ", "
-					+ num(c) + ")* Math.pow(10, " + (nx - nx / 2 + ny - ny / 2)
+					+ num(c) + ")* Math.pow(10, " + (nx / 2 + ny / 2)
 					+ ") + mult(" + a + ", " + d + ", " + num(a) + ", "
 					+ num(d) + ")* Math.pow(10, " + nx / 2 + ") + mult(" + b
 					+ ", " + c + ", " + num(b) + ", " + num(c)
 					+ ")* Math.pow(10, " + ny / 2 + ") + mult(" + b + ", " + d
 					+ ", " + num(b) + ", " + num(d) + "))");
 			s = (long) (mult(a, c, num(a), num(c))
-					* Math.pow(10, nx - nx / 2 + ny - ny / 2)
+					* Math.pow(10, nx / 2 + ny / 2)
 					+ mult(a, d, num(a), num(d)) * Math.pow(10, nx / 2)
 					+ mult(b, c, num(b), num(c)) * Math.pow(10, ny / 2) + mult(
 					b, d, num(b), num(d))); // 书上的公式
